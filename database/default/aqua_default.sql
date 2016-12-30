@@ -49,7 +49,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `aqua_users`;
 CREATE TABLE `aqua_users` (
   `ID`            INT(5) UNSIGNED        NOT NULL,
-  `user_password` VARCHAR(20)
+  `user_password` VARCHAR(60)
                   COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_name`     VARCHAR(20)
                   COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -62,5 +62,5 @@ CREATE TABLE `aqua_users` (
 
 LOCK TABLES `aqua_users`  WRITE;
 INSERT INTO `aqua_users`  VALUES
-  ( FLOOR(RAND() * 500), '$2y$10$cNwnSCSIDAHp2u/Zlyf3WeK6qZVpoubS4GqGaA6tirK7yHwEFbPHO', 'admin', 'admin');
+  ( FLOOR(RAND() * 500), '$2y$10$HOWOkML8jRpuAJjeGufSg.t1gSHPvfwvhqxe7ClgDejWlLnHbNUi6', 'admin', 'admin');
 UNLOCK TABLES;
